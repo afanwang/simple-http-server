@@ -1,0 +1,7 @@
+# Config file for a Sample HTTP Server in Golang
+appName: "A Sample HTTP Server in Golang"
+port: 8080
+postTempURL: "/temp"
+getErrorsURL: "/errors"
+deleteURL: "/errors"
+readmeURL: "/"

@@ -1,0 +1,14 @@
+version: "3.4"
+services:
+  pds:
+    build:
+      context: ../../../..
+      network: host
+      dockerfile: ./HttpServer/Dockerfile
+    container_name: app
+    image: "fw/app:${RELEASE_TAG}"
+    network_mode: host
+    restart: unless-stopped
+    volumes:
+      # Target must match the config directory specified in the Dockerfile
+      - ./configs/app.yaml:/configs/app.yaml
